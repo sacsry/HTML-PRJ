@@ -26,6 +26,7 @@
     padding-right :10px;
 }
 .title{
+    top:0;
     height:250px;
     right:clear;
 }
@@ -53,7 +54,6 @@
 #header{
     background-image: url("../IMG/배경\ 이미지0.jpg");
     background-size:cover;
-    
 }
 .main{
     margin: 0px 26%;
@@ -61,3 +61,13 @@
 fieldset{
     margin:20px auto;
 }
+/* #nav{
+    background-image: url("../IMG/배경\ 이미지0.jpg");
+    background-size:cover;
+    width:100%;
+    position:fixed;
+    top:0;
+    height:80px;
+    background-color: black;
+    z-index: 3;
+} */

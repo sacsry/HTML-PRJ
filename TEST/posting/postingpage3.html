@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <style>
+        .contact{
+            width:500px;
+            margin:0px auto;
+        }
+        .contact input:not([type=submit]){
+            width:300px;
+            height:30px;
+            border:1px solid white;
+        }
+        .contact label{
+            width: 80px;
+            float: left;
+        }
+        .contents{
+            margin:10px;
+        }
+        input[type=submit]{
+            width: 300px;
+            height: 30px;
+            margin:10px auto;
+            border-radius: 8px;
+            display: block;
+        }
+        input[type="submit"]:hover{
+            background-color: black;
+            color:white;
+            border:1px solid gray;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    
+    <main class="main">
+        <div>
+            <form action="" class="contact">
+                <fieldset>
+                    <p style="text-align: center; margin: 20px; font-size: 25px; font-weight: bold;">회원정보를 입력해주세요</p>
+                    <div class="contents">
+                        <label for="name">아이디</label>
+                        <input type="text" id ="name" name="name" maxlength="20" placeholder="Name" autofocus required/>
+                        <button>중복 확인</button>
+                        <div id ="iderr"></div>
+                    </div>
+                    <hr>
+                    <div class="contents">
+                        <label for="password">비밀번호</label>
+                        <input type="password" id ="password" name="password" maxlength="30" placeholder="Password" required>
+                        <div id ="pwderr"></div>
+                    </div>
+                    <hr>
+                    <div class="contents">
+                        <label for="email">이메일</label>
+                        <input type="email" id ="email" name="email" maxlength="30" placeholder="Email Address" required>
+                        <button>중복 확인</button>
+                        <div id ="emailerr"></div>
+                    </div>
+                    <hr>
+                    <div class="contents">
+                        <label for="tel">연락처</label>
+                        <input type="tel" id ="phone" name="phone" maxlength="11" placeholder="Phone Number" required>
+                        <button>인증</button>
+                        <div id ="phoneerr"></div>
+                    </div>
+                    <hr>
+                    <div class="contents">
+                        <textarea name="Message" id="Message" cols="50" rows="20" placeholder="Message" required ></textarea>
+                    </div>
+                    <hr>
+                    <div class="submitbtn">
+                        <input type="submit" value="Next">
+                    </div>
+                    
+                </fieldset>
+                <hr>
+            </form>
+            <div class="submitbtn">
+                <input type="submit" value="<-Past posts" onclick="window.location.href='./postingpage2.html'">
+                <input type="submit" value="Next posts->" onclick="window.location.href='./postingpage4.html'">
+            </div>
+        </div>
+        
+        <hr>
+        <div class="submitbtn" style="width: 100px;">
+            <input type="submit" class="gopost" value="목록으로 가기" onclick="window.location.href='/posts.html'">
+        </div>
+    </main>
+    
+    <script src="js/header.js"></script>
+    <script>
+        let iderr = document.querySelector("#iderr");
+        let pwderr = document.querySelector('#pwderr');
+        let emailerr = document.querySelector('#emailerr');
+        let id = document.querySelector('#name');
+        let pwd = document.querySelector('#password');
+        let email = document.querySelector('#email');
+        let submit = document.querySelector(".submitbtn");
+        submit.addEventListener('click',() =>{
+            if(id.value.length<8 || id.value.length>12){
+                iderr.innerHTML = "<strong>&nbsp;&nbsp;&nbsp;8글자~12글자이내로 작성해주세요</strong>"
+                iderr.style.color = "red";
+            }
+            if(pwd.value.length<8 || pwd.value.length>12){
+                pwderr.innerHTML = "<strong>&nbsp;&nbsp;&nbsp;8글자~12글자이내로 작성해주세요</strong>"
+                pwderr.style.color = "red";
+            }
+            if(email.value.length<8 || email.value.length>12){
+                emailerr.innerHTML = "<strong>&nbsp;&nbsp;&nbsp;8글자~12글자이내로 작성해주세요</strong>"
+                emailerr.style.color = "red";
+            }
+        });
+        
+    </script>
+</body>
+</html>

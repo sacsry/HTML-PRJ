@@ -16,7 +16,6 @@
             color:blue;
         }
         .content{
-            padding:50px;
             margin:0px auto;
         
         }
@@ -31,8 +30,47 @@
             background-color: black;
             margin: 10px auto;
         }
-        .content:nth-of-type(odd){
+        /* .content:nth-of-type(even){
             background-color: gray;
+        } */
+        #profile{
+            width:120px;
+            height:180px;
+            background-size:cover;
+            float:left;
+            padding:0px;
+        }
+        .morebtn{
+            text-align: center;
+            font-size: 2.5vw;
+        }
+        .morebtn a{
+            text-decoration: none;
+            color: gray;
+        }
+        #content1{
+            grid-template-columns: 300px 1fr;
+            grid-template-rows: 250px 1fr;
+            padding:0px;
+        }
+        .box{
+            border :1px solid white;
+            width: 225px;
+            height:200px;
+            position: relative;
+        }
+        .box img{
+            background-size: cover;
+            width: 225px;
+            height: 200px;
+        }
+        .text{
+            color: white;
+            font-weight: bold;
+            font-size:40px;
+            position: absolute;
+            top:80px;
+            right: 70px;
         }
         
     </style>
@@ -53,7 +91,7 @@
                         <li><a href = "home.html">Home</a></li>
                         <li><a href = "about.html">About</a></li>
                         <li><a href = "posts.html">Posts</a></li>
-                        <li><a href = "contact.html">Contact</a></li>
+                        <li><a href = "contact.html">Join</a></li>
                         <li><a href = "logins.html">Logins</a></li>
                     </ul>
                 </td>
@@ -66,50 +104,78 @@
     </div>
     </header>
     <main class="main">
+        <!-- <hr>
         <div class="content">
-            <a href="https://github.com/sacsry/testsample">
+            <a href="#">
+                <h1>Man Must explore, and this is exploration at its greatest</h1>
+                <h2>Problems look mighty small from 150 miles up</h2>
+                <span>Posted by start Bootstrap on January 31, 2020 4 mins read</span>
+            </a>
+        </div>
+        <hr>
+        <div class="content">
+            <a href="#">
+                <h1>Man Must explore, and this is exploration at its greatest</h1>
+                <h2>Problems look mighty small from 150 miles up</h2>
+                <span>Posted by start Bootstrap on January 31, 2020 4 mins read</span>
+            </a>
+        </div>
+        <hr>
+        <div class="content">
+            <a href="#">
+                <h1>Man Must explore, and this is exploration at its greatest</h1>
+                <h2>Problems look mighty small from 150 miles up</h2>
+                <span>Posted by start Bootstrap on January 31, 2020 4 mins read</span>
+            </a>
+        </div>
+        <hr>
+        <div class="content">
+            <a href="#">
+                <h1>Man Must explore, and this is exploration at its greatest</h1>
+                <h2>Problems look mighty small from 150 miles up</h2>
+                <span>Posted by start Bootstrap on January 31, 2020 4 mins read</span>
+            </a>
+        </div> -->
+        <hr>
+        <div class ="content" style="margin:0px; padding:0px;">
+            <img src="/IMG/이현빈 copy.jpg" alt="" id="profile">
+            
+                <br>
+                <h2>이현빈 (HYUN BEEN LEE)</h2>
+                <br>
+                1996.02.01
+                <br>
+                ✉️ Email: [leehv1234@naver.com]
+                <br>
+                ✏️ blog: <a href="http://blog.naver.com/leehv1234 " style="font-size: 16px;"">[블로그]</a>
+                <br>
+                🌟 Github: <a href="https://github.com/sacsry" style="font-size: 16px;">SacSry</a>
+                <br>     
+                📱 Phone : 010-6296-8567
+                <br>
+
+                <br><br><br><br>
+                
+        </div>
+        <div class="content" id="content1">
+            <!-- <a href="https://github.com/sacsry/testsample">
                 <h1>JAVA GUI 개인프로젝트</h1><br>
                 <h2>인디게임 개발</h2>
                 <span>Posted by start Bootstrap on January 31, 2020 4 mins read</span>
-            </a>
+            </a> -->
+            <a href="/about.html" class="box box1"><img src="/IMG/배경 이미지0.jpg" alt="" class="imglist"><p class ="text">about me</p></a>
+            <a href="/posts.html" class="box box2"><img src="/IMG/배경 이미지1.jpg" alt="" class="imglist"><p class ="text">posts</p></a>
+            <a href="/contact.html" class="box box3"><img src="/IMG/배경 이미지2.jpg" alt="" class="imglist"><p class="text">join</p></a>
+            <a href="/logins.html" class="box box4"><img src="/IMG/배경 이미지3.jpg" alt="" class="imglist"><p class="text">login</p></a>
         </div>
-        <hr>
-        <div class="content">
-            <a href="#">
-                <h1>Man Must explore, and this is exploration at its greatest</h1>
-                <h2>Problems look mighty small from 150 miles up</h2>
-                <span>Posted by start Bootstrap on January 31, 2020 4 mins read</span>
-            </a>
+        <div class ="morebtn" style="text-align: center;">
+            <a href="#" id="idmorebtn">더 보 기<br><</a>
         </div>
-        <hr>
-        <div class="content">
-            <a href="#">
-                <h1>Man Must explore, and this is exploration at its greatest</h1>
-                <h2>Problems look mighty small from 150 miles up</h2>
-                <span>Posted by start Bootstrap on January 31, 2020 4 mins read</span>
-            </a>
-        </div>
-        <hr>
-        <div class="content">
-            <a href="#">
-                <h1>Man Must explore, and this is exploration at its greatest</h1>
-                <h2>Problems look mighty small from 150 miles up</h2>
-                <span>Posted by start Bootstrap on January 31, 2020 4 mins read</span>
-            </a>
-        </div>
-        <hr>
-        <div class="content">
-            <a href="#">
-                <h1>Man Must explore, and this is exploration at its greatest</h1>
-                <h2>Problems look mighty small from 150 miles up</h2>
-                <span>Posted by start Bootstrap on January 31, 2020 4 mins read</span>
-            </a>
-        </div>
-        <hr>
         <div class="moreBar">
             <input type="submit" value="VIEW ALL POSTS->" class="viewMore">
         </div>
         <hr>
+        
     </main>
     <footer>
         <nav id="footer">
@@ -127,9 +193,26 @@
                 </div>
         </nav>
     </footer>
-    <script src="js/header.js">
-        
-        
+    <script src="js/header.js"></script>
+    <script>
+        let morebtn = document.querySelector("#idmorebtn");
+        let content = document.querySelector("#content1");
+        let boolean = false;
+        console.log(!boolean);
+        content.style.display = "none";
+        morebtn.addEventListener('click',()=>{
+            if(!boolean){
+                boolean = true;
+                content.style.display = "grid";
+                morebtn.innerText = ">\n 감 추 기";
+                
+            }
+            else{
+                boolean = false;
+                content.style.display ="none";
+                morebtn.innerText = "더 보 기\n <";
+            }
+        });
     </script>
 </body>
 </html>

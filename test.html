@@ -169,6 +169,7 @@
                 QR코드로 로그인해주세요.</span>
             </fieldset>
         </form>
+        <div id="cursor1"></div>
     </main>
     <footer>
         <nav id="footer">
@@ -180,6 +181,7 @@
                         <li><a href="https://github.com/"><img src="./IMG/깃허브 로고.png" alt=""></a></li>
                     </ul>
                 </div>
+                
                 
                 <div id="footerSource">
                     <p>copyright © Bootstrap 2023</p>
@@ -213,6 +215,11 @@
             loginarr[1].style.display = "none";
             loginarr[2].style.display = "block";
         }
+        const cursor1 = document.querySelector("#cursor1");
+        loginarr[0].addEventListner('mousemove',(e)=>{
+            cursor1.style.backgroundImage = "./IMG/이메일 로고.png";
+
+        })
         
     </script>
 </body>

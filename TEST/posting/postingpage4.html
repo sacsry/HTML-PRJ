@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="./CSS/header.css">
     <link rel="stylesheet" href="./CSS/footer.css">
     <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
         .login{
             margin:20px auto;
             width: 330px;
@@ -83,37 +87,27 @@
             width:128px;
             margin:0px auto;
         }
+        input[type=submit]{
+            width: 300px;
+            height: 30px;
+            margin:10px auto;
+            border-radius: 8px;
+            display: block;
+        }
+        input[type="submit"]:hover{
+            background-color: black;
+            color:white;
+            border:1px solid gray;
+        }
+        
     </style>
 </head>
 <body>
-    <header id="header">
-    <nav id="nav">
-        <div id="topmenu">
-            <table>
-                <td class="logo">
-                    <div id="logo" width="100px">
-                        <a href="home.html">Blog</a>
-                        <input type="button" name="메뉴" id="메뉴" value="Menu">
-                    </div>
-                </td>
-                <td class=" sidebar">
-                    <ul id="list">
-                        <li><a href = "home.html">Home</a></li>
-                        <li><a href = "about.html">About</a></li>
-                        <li><a href = "posts.html">Posts</a></li>
-                        <li><a href = "contact.html">Join</a></li>
-                        <li><a href = "logins.html">Logins</a></li>
-                    </ul>
-                </td>
-            </table>
-        </div>
-    </nav>
-    <div class="title">
-        <h1 id="MainTitle">My blog</h1>
-        <h2 id="SubTitle">Sub title</h2>
-    </div>
-    </header>
+    
     <main class="main">
+        <h2 style="text-align: center;">로그인 탭 기능 추가</h2><br>
+        <h3 style="text-align: center;">수정사항 : 로그인페이지 여러개에서 하나로 압축 스크립트 처리</h3>
+        <br><br><br><br><br><br>
         <p style="text-align: center; margin: 20px; font-size: 25px; font-weight: bold;">Blog Login</p>
         <form action="" class="login" id="login0">
             <ul>
@@ -160,7 +154,7 @@
             </ul>
             <fieldset>
                 <div id="Qrcode">
-                    <img src="./IMG/QR코드.png" alt="">
+                    <img src="/IMG/QR코드.png" alt="">
                 </div>
                 <div id="button">
                     <input type="submit" value="로그인" class="loginbtn">
@@ -169,23 +163,15 @@
                 QR코드로 로그인해주세요.</span>
             </fieldset>
         </form>
+        <div class="submitbtn">
+            <input type="submit" value="<-Past posts" onclick="window.location.href='./postingpage3.html'">
+        </div>
+        <hr>
+        <div class="submitbtn">
+            <input type="submit" class="gopost" value="목록으로 가기" onclick="window.location.href='/posts.html'">
+        </div>
     </main>
-    <footer>
-        <nav id="footer">
-                <div id="footerLink">
-                    <ul>
-                        <li><a href=""><img src="./IMG/이메일 로고.png" alt="메일"></a></li>
-                        <li><a href="https://twitter.com/?lang=ko"><img src="./IMG/트위터 로고.png" alt="트위터 로고"></a></li>
-                        <li><a href="https://www.facebook.com/"><img src="./IMG/페북 로고.png" alt=""></a></li>
-                        <li><a href="https://github.com/"><img src="./IMG/깃허브 로고.png" alt=""></a></li>
-                    </ul>
-                </div>
-                
-                <div id="footerSource">
-                    <p>copyright © Bootstrap 2023</p>
-                </div>
-        </nav>
-    </footer>
+    
     
     <script src="js/header.js"></script>
     <script>
@@ -225,7 +211,7 @@
             loginarr1[2][0].children[0].style.borderBottom = "1px solid black";
             loginarr1[2][0].children[1].style.borderBottom = "1px solid black";
             loginarr1[2][0].children[2].style.borderBottom = "1px solid white";
-        } /// 바꿔라 나중에 좋은말할떄
+        }
         
     </script>
 </body>

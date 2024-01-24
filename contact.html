@@ -54,7 +54,7 @@
                         <li><a href = "home.html">Home</a></li>
                         <li><a href = "about.html">About</a></li>
                         <li><a href = "posts.html">Posts</a></li>
-                        <li><a href = "contact.html">Contact</a></li>
+                        <li><a href = "contact.html">Join</a></li>
                         <li><a href = "logins.html">Logins</a></li>
                     </ul>
                 </td>
@@ -62,7 +62,7 @@
         </div>
     </nav>
     <div class="title">
-        <h1 id="MainTitle">Contact</h1>
+        <h1 id="MainTitle">Join</h1>
         <h2 id="SubTitle">Sub title</h2>
     </div>
     </header>
@@ -74,7 +74,7 @@
                     <div class="contents">
                         <label for="name">아이디</label>
                         <input type="text" id ="name" name="name" maxlength="20" placeholder="Name" autofocus required/>
-                        <button>중복 확인</button>
+                        <button id="idconfirm">중복 확인</button>
                         <div id ="iderr"></div>
                     </div>
                     <hr>
@@ -87,14 +87,14 @@
                     <div class="contents">
                         <label for="email">이메일</label>
                         <input type="email" id ="email" name="email" maxlength="30" placeholder="Email Address" required>
-                        <button>중복 확인</button>
+                        <button id="emailconfirm">중복 확인</button>
                         <div id ="emailerr"></div>
                     </div>
                     <hr>
                     <div class="contents">
                         <label for="tel">연락처</label>
                         <input type="tel" id ="phone" name="phone" maxlength="11" placeholder="Phone Number" required>
-                        <button>인증</button>
+                        <button id="phoneconfirm">인증</button>
                         <div id ="phoneerr"></div>
                     </div>
                     <hr>
@@ -136,18 +136,108 @@
         let pwd = document.querySelector('#password');
         let email = document.querySelector('#email');
         let submit = document.querySelector(".submitbtn");
+
+        
+        let idconfirmbtn = document.querySelector("#idconfirm");
+        let emailconfirmbtn = document.querySelector("#emailconfirm");
+        let phoneconfirmbtn = document.querySelector("#phoneconfirm");
+
+
+        let idconfirm = false;
+        let emailconfirm = false;
+        let phoneconfirm = false;
+        let pwdconfirm = false;
         submit.addEventListener('click',() =>{
+            if(idconfirm == false){
+                alert("아이디 중복확인");
+                event.preventDefault();
+            }
+            else if(emailconfirm == false){
+                alert("이메일 중복확인");
+                event.preventDefault();
+            }
+            else if(phoneconfirm == false){
+                alert("폰좀 사라");
+                event.preventDefault();
+            }
+            else if(pwdconfirm == false){
+                alert("빨간 글씨가 안보이니?");
+                event.preventDefault();
+            }
+        });
+
+        id.addEventListener('change' ,()=>{
+            idconfirm = false;
             if(id.value.length<8 || id.value.length>12){
                 iderr.innerHTML = "<strong>&nbsp;&nbsp;&nbsp;8글자~12글자이내로 작성해주세요</strong>"
                 iderr.style.color = "red";
+                idconfirmbtn.disabled = true;
             }
-            if(pwd.value.length<8 || pwd.value.length>12){
-                pwderr.innerHTML = "<strong>&nbsp;&nbsp;&nbsp;8글자~12글자이내로 작성해주세요</strong>"
-                pwderr.style.color = "red";
+            else{
+                iderr.innerHTML = "";
+                idconfirmbtn.disabled = false;
             }
-            if(email.value.length<8 || email.value.length>12){
-                emailerr.innerHTML = "<strong>&nbsp;&nbsp;&nbsp;8글자~12글자이내로 작성해주세요</strong>"
+        });
+        email.addEventListener('change' ,()=>{
+            emailconfirm = false;
+            if(!email.value.includes("@") || !email.value.includes(".")){
+                emailerr.innerHTML ="<strong>&nbsp;&nbsp;&nbsp; @나 .을 포함해서 작성하세요."
                 emailerr.style.color = "red";
+                emailconfirmbtn.disabled = true;
+            }
+            else if(email.value.includes("@") && email.value.includes(".")){
+                emailerr.innerHTML =""
+                emailconfirmbtn.disabled = false;
+            }
+            console.log(email.value.includes("@") && email.value.includes("."));
+        });
+        pwd.addEventListener('change', () =>{
+            if(pwd.value.length<8 || pwd.value.length>12){
+                pwderr.innerHTML = "<strong>&nbsp;&nbsp;&nbsp;8글자~12글자이내 영어대문자/소문자/특수문자 하나씩넣어서 작성해주세요</strong>"                
+                pwderr.style.color = "red";
+                pwdconfirm = false;
+            }
+            else{
+                pwderr.innerHTML = "";
+                pwdconfirm = true;
+            }
+        });
+        phone.addEventListener('change' ,()=>{
+            phoneconfirm = false;
+        });
+
+        
+
+        
+        idconfirmbtn.addEventListener('click',()=>{
+            if(id.value !== "id" && id.value != ""){
+                alert("사용할 수 있는 아이디입니다.");
+                idconfirm = true;
+            }
+            else{
+                alert("사용할 수 없는 아이디입니다.");
+                idconfirm = false;
+            }
+        });
+        emailconfirmbtn.addEventListener('click',()=>{
+            if(email.value !== "email" && email.value != ""){
+                alert("사용할 수 있는 이메일입니다.");
+                emailconfirm = true;
+            }
+            else{
+                alert("사용할 수 없는 이메일입니다.");
+                emailconfirm = false;
+            }
+        });
+
+        phoneconfirmbtn.addEventListener('click',()=>{
+            if(phone.value !== "phone" && phone.value != ""){
+                alert("인증되었습니다.");
+                phoneconfirm = true;
+            }
+            else{
+                alert("인증 실패");
+                phoneconfirm= false;
             }
         });
         

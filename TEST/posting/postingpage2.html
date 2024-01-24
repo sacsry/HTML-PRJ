@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <style>
+        #main{
+            padding:200px;
+            margin:20px auto;
+            text-align: left;
+        }
+
+        .viewMore{
+            background-color: white;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+        }
+        .moreBar{
+            background-color: black;
+            margin: 10px auto;
+        }
+        #imgborder{
+            
+            width :100%;
+            height: 300px;
+            margin : 0px auto;
+            position: relative;
+            
+        }
+        .morebtn{
+            position: absolute;
+            top:143px;
+            left:100px;
+            width:30px;
+            height:30px;
+            font-size: 25px;
+            background-color: gray;
+            color:white;
+            font-weight: bold;
+            z-index: 2;
+        }
+        .morebtn:hover{
+            color:black;
+        }
+        #mainborder{
+            width:100%;
+            margin :40px auto;
+        }
+        #main div{
+            background-color: white;
+            margin:0px auto;
+            padding:0px;
+        }
+        .text{
+            font-size: 18px;
+        }
+        .submitbtn{
+            width:230px;
+            margin:0px auto;
+        }
+        input[type=submit]:hover{
+            background-color:black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <div style = "text-align: center;">
+            <H1>헤더 푸터 제외 본문만 적용시킨 부분입니다.</H1>
+        <H2>기존 HTML CSS 구조에 사진을 넣고 사진슬라이드를 스크립트로 구현했습니다. </H2>
+        <div id="main">
+            <div>
+            <div id="imgborder" class="border">
+                <img src="/IMG/이현빈 copy.jpg" alt="" id="img0" class="imagelist">
+                <img src="/IMG/QR코드.png" alt="" id="img1" class="imagelist">
+                <img src="/IMG/배경 이미지1.jpg" alt="" id="img2" class="imagelist">
+                <img src="/IMG/배경 이미지3.JPG" alt="" id="img3" class="imagelist">
+                <img src="/IMG/공부 이미지.png" alt="" id="img4" class="imagelist">
+                <button class ="morebtn" > + </button>
+            </div>
+            <div id ="mainborder" >
+                <div id="introduce" class="border">
+                    <h3># Introduce</h3>
+                    <h4>소통하는 개발자 이현빈입니다.</h4> 
+                    <p class="text">
+                        안녕하세요 JAVA/Spring Backend Developer 및 웹 개발자를 꿈꾸는 이현빈입니다.  <br>
+                        이 페이지는 저를 소개하는 페이지입니다. <br>
+                        제가 공부한 과정과 성과를 공유하니 둘러봐 주시기 바랍니다. <br><br><br><hr>
+                    </p>
+                </div>
+                
+                <div id="education" class="border">
+                    <h3># EDUCATION</h3> <br>
+                    <p class="text">
+                        2014.02 부천고등학교 졸업 <br>
+                        2014.03-2020.02 강릉원주대학교 수학과 중퇴 <br>
+        
+                        2020.03-2023.02 국민대학교 정보보안암호수학과 졸업 <br>
+        
+                        2023.11- 천재교육 풀스택4기 진행중 <br>
+                    </p>
+                    <br><br><br><hr>
+                </div>
+                
+                <div id="aboutme" class="border">
+                    <h3># About Me</h3>
+                    <p class="text">
+                        저는 개발도 고객에게 일종의 서비스를 제공하는 업종이라고 생각합니다. <br>
+                        저는 고객에게 편리한 서비스 제공을 위해 동료와의 ‘협업’과 ‘소통’을 중요시합니다. <br> 
+                        또한 급변하는 IT생태계에서 적응하고 살아남기 위해 새로운 기술에 대한 거부감을 줄이고 <br>
+                        필요한 기술스택을 꾸준히 익히고 있습니다.
+                    </p>
+                    <br><br><br><hr>
+                </div>
+                
+                
+                <div id="study" class="border">
+                    <br>
+                    <h4> # 교육과정 사용 기술스택</h4>
+                    <img src="/IMG/공부 이미지.png" style="background-size: cover; width:128px;height: 128px;float:left; padding-right:40px;">
+                    <ul style="left: clear; margin-top: 5px;">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JAVASCRIPT</li>
+                        <li>JSON</li>
+                        <li>JAVA</li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        <hr>
+        <div class="submitbtn">
+            <input type="submit" value="<-Past posts" onclick="window.location.href='./postingpage.html'">
+            <input type="submit" value="Next posts->" onclick="window.location.href='./postingpage3.html'">
+        </div>
+        <hr>
+        <div class="submitbtn" style="width: 100px;">
+            <input type="submit" class="gopost" value="목록으로 가기" onclick="window.location.href='/posts.html'">
+        </div>
+        <hr>
+    </main>
+    
+    <script src="js/header.js"></script>
+    <script>
+        let img = document.querySelectorAll(".imagelist");
+        let border = document.querySelectorAll(".border");
+        let btn = document.querySelector(".morebtn");
+
+        let borderlist = [];
+        let imglist= [];
+
+        let idx = 0;
+        let Boolean = true;
+        
+        img.forEach((img)=>{
+            img.style.width ="130px";
+            img.style.height ="173px";
+            img.style.backgroundSize = "cover";
+            imglist[idx] = img;
+
+            idx++;
+        });
+        idx =0;
+        border.forEach((border) => {
+            borderlist[idx] = border;
+            idx++;
+        });
+        for(let i =1; i<img.length; i++){
+            let move = 140+(-137 *i);
+            imglist[i].style.transform = `translateX(${move}px)`;
+            // imglist[i].style.visibility = "hidden";
+            imglist[i].style.padding = "0px";
+            imglist[i].style.margin = "0px";
+            imglist[i].addEventListener('click',()=>{
+                switch(i){
+                    case 1 : borderlist[0].style.transform = `translateY(0px)`
+                    borderlist[1].style.transform = `translateY(0px)`  
+                    borderlist[2].style.transform = `translateY(0px)` 
+                    borderlist[3].style.transform = `translateY(0px)` 
+                    borderlist[4].style.transform = `translateY(0px)`
+                    break; 
+                    case 2 : borderlist[0].style.transform = `translateY(0px)`
+                    borderlist[1].style.transform = `translateY(0px)`  
+                    borderlist[2].style.transform = `translateY(-280px)` 
+                    borderlist[3].style.transform = `translateY(0px)` 
+                    borderlist[4].style.transform = `translateY(0px)`
+                    break;
+                    case 3 :
+                    borderlist[0].style.transform = `translateY(0px)`
+                    borderlist[1].style.transform = `translateY(0px)`  
+                    borderlist[2].style.transform = `translateY(0px)` 
+                    borderlist[3].style.transform = `translateY(-580px)` 
+                    borderlist[4].style.transform = `translateY(0px)`
+                    break;
+                    case 4 :
+                    borderlist[0].style.transform = `translateY(0px)`
+                    borderlist[1].style.transform = `translateY(0px)`  
+                    borderlist[2].style.transform = `translateY(0px)` 
+                    borderlist[3].style.transform = `translateY(0px)` 
+                    borderlist[4].style.transform = `translateY(-870px)`
+                    break;
+                }  /////반복문으로 바꿔라 나중에 다시... 꼭바까라... 이게뭐냐...
+                let delay = 0.2*i;
+                borderlist[i].style.transition = `${delay}s ease`;
+                
+            })
+        }
+        imglist[0].style.position = "absolute";///반응형으로 만드니까 자꾸 움직이길래 빡쳐서 걍 박아놈
+        imglist[0].style.zIndex = "1";
+        btn.addEventListener('click',()=>{
+            if(Boolean == true){
+                for(let i =1; i<img.length; i++){
+                    // imglist[i].style.visibility = "visible";
+                    imglist[i].style.transform = "translateX(140px)";
+                    let delay = 0.2*i;
+                    imglist[i].style.transition = `${delay}s ease`;
+                    }
+                Boolean = false;
+            }
+            else{
+                for(let i =1; i<img.length; i++){
+                    let move = 140+(-137 *i);
+                    // imglist[i].style.visibility = "hidden";
+                    imglist[i].style.transform = `translateX(${move}px)`;
+                    // let delay = 0.2*Math.abs(i-5);
+                    let delay = 0.2*i;
+                    imglist[i].style.transition = `${delay}s linear `;
+                    }
+                Boolean = true;
+            }
+            
+        });
+        
+    </script>
+</body>
+</html>
