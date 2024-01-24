@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <style>
+        .login{
+            margin:20px auto;
+            width: 330px;
+        }
+        label{
+            display:inline-block;
+            text-align: left;
+            width:70px;
+        }
+        #numrange{
+            border:1px solid black;
+            padding:10px;
+            margin-top:30px;
+        }
+        
+        .login input:not([type = submit]){
+            height:30px;
+            width:200px;
+            border:1px solid white;
+        }
+        #loginbtn{
+            width:100px;
+            height:30px;
+            margin:0px auto;
+            margin-top:30px;
+            display:block;
+        }
+        #loginbtn:hover{
+            font-weight: bold;
+            background-color: black;
+            border: 2px solid gray;
+            color:white;
+        }
+        .login fieldset{
+            border: 1px solid black;
+            border-top: 1px solid white;
+            padding:10px;
+        }
+        .login legend{
+            width:330px;
+            margin:0px;
+        }
+        .login a:not([href="#"]){
+            float:left;
+            width:108px;
+            height:30px;
+            margin:0px;
+            padding:0px;
+            text-align: center;
+            text-decoration: none;
+            color:black;
+            border-top:1px solid black;
+            border-right:1px solid black;
+            border-left:1px solid black;
+            
+        }
+        .login li{
+            list-style-type: none;
+            float:left;
+        }
+        .login li:nth-child(1),.login li:nth-child(3){
+            border-bottom: 1px solid black;
+        }
+        .menu_text{
+            text-align: center;
+            font-size:14px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header id="header">
+    <nav id="nav">
+        <div id="topmenu">
+            <table>
+                <td class="logo">
+                    <div id="logo" width="100px">
+                        <a href="home.html">Blog</a>
+                        <input type="button" name="메뉴" id="메뉴" value="Menu">
+                    </div>
+                </td>
+                <td class=" sidebar">
+                    <ul id="list">
+                        <li><a href = "home.html">Home</a></li>
+                        <li><a href = "about.html">About</a></li>
+                        <li><a href = "posts.html">Posts</a></li>
+                        <li><a href = "contact.html">Contact</a></li>
+                        <li><a href = "logins.html">Logins</a></li>
+                    </ul>
+                </td>
+            </table>
+        </div>
+    </nav>
+    <div class="title">
+        <h1 id="MainTitle">My blog</h1>
+        <h2 id="SubTitle">Sub title</h2>
+    </div>
+    </header>
+    <main class="main">
+        <form action="" class="login">
+            <p style="text-align: center; margin: 20px; font-size: 25px; font-weight: bold;">Blog Login</p>
+            <ul>
+                <li><a href="./logins.html">로그인</a></li>
+                <li><a href="./logins1.html">일회용 번호</a></li>
+                <li><a href="./logins2.html">QR 코드</a></li>
+            </ul>
+            <fieldset>
+                <span class="menu_text">앱의 메뉴 > 설정  > 로그인 아이디 관리 >
+                    더보기  > 일회용 로그인 번호에 보이는 번호를 입력해 주세요. <a href="#">도움말</a></span>
+                <div id="numrange">
+                <input type="text" name="num" id="num" maxlength="20" placeholder="번호를 입력하세요." required autofocus/>
+                </div>
+                <div id="button">
+                    <input type="submit" value="로그인" id="loginbtn">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <nav id="footer">
+                <div id="footerLink">
+                    <ul>
+                        <li><a href=""><img src="./IMG/이메일 로고.png" alt="메일"></a></li>
+                        <li><a href="https://twitter.com/?lang=ko"><img src="./IMG/트위터 로고.png" alt="트위터 로고"></a></li>
+                        <li><a href="https://www.facebook.com/"><img src="./IMG/페북 로고.png" alt=""></a></li>
+                        <li><a href="https://github.com/"><img src="./IMG/깃허브 로고.png" alt=""></a></li>
+                    </ul>
+                </div>
+                
+                <div id="footerSource">
+                    <p>copyright © Bootstrap 2023</p>
+                </div>
+        </nav>
+    </footer>
+</body>
+</html>

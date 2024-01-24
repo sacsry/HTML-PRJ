@@ -1,0 +1,22 @@
+#footerLink a{
+    text-decoration: none;
+}
+#footerLink{
+    margin: 50px auto;
+}
+#footerLink li{
+    list-style-type: none;
+    display: inline-block;
+    margin:auto 20px ;
+}
+#footerLink>ul{
+    margin:20px auto;
+    width:500px;
+    display: block;
+}
+#footerSource{
+    text-align: center;
+}
+footer{
+    background-color: antiquewhite;
+}

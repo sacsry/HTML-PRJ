@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <style>
+        #nav{
+            height:50px;
+        }
+        li{
+            float:right;
+            padding:2px;
+        }
+        #button{
+            float:left;
+        }
+        ui{
+            list-style: none;
+        }
+        
+        #title{
+            text-align: center;
+            height:300px;
+        }
+        p{
+            text-align: center;
+            font-size:50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="topmenu">
+                <a href="http://127.0.0.1:5500/home.html" id="logo"><img src="" alt="blog"></a>
+                <input type="button" name="메뉴" id="메뉴" value="Menu">
+                <table>
+                    <ui>
+                        <li><a href = "http://127.0.0.1:5500/home.html">Home</a></li>
+                        <li><a href = "http://127.0.0.1:5500/about.html">About</a></li>
+                        <li><a href = "http://127.0.0.1:5500/posts.html">Posts</a></li>
+                        <li><a href = "http://127.0.0.1:5500/contact.html">Contact</a></li>
+                        <li><a href = "http://127.0.0.1:5500/logins.html">Logins</a></li>
+                    </ui>
+                </table>
+            </div>
+        </nav>
+        <div id="title">
+            <p>Posts</p>
+            <p>sub title</p>
+        </div>
+    </header>
+    <main>
+        <div>
+            <section class="section" onclick="window.location.href='http://127.0.0.1:5500/posts-detail.html'">
+                <h1>Man musts explore, and this is <br> exploration at its greatest</h1>
+                <h3>Problems look mighty small from 150 miles up</h3>
+                <span>Posted by start </span>
+            </section>
+            <hr>
+            <section class="section" onclick="window.location.href='http://127.0.0.1:5500/posts-detail.html'"> 
+                <h1>Man musts explore, and this is <br> exploration at its greatest</h1>
+                <h3>Problems look mighty small from 150 miles up</h3>
+                <span>Posted by start </span>
+            </section>
+            <hr>
+            <section class="section" onclick="window.location.href='http://127.0.0.1:5500/posts-detail.html'"> 
+                <h1>Man musts explore, and this is <br> exploration at its greatest</h1>
+                <h3>Problems look mighty small from 150 miles up</h3>
+                <span>Posted by start </span>
+            </section>
+            <hr>
+            <section class="section" onclick="window.location.href='http://127.0.0.1:5500/posts-detail.html'"> 
+                <h1>Man musts explore, and this is <br> exploration at its greatest</h1>
+                <h3>Problems look mighty small from 150 miles up</h3>
+                <span>Posted by start </span>
+            </section>
+            <hr>
+            <input type="submit" value="VIEW ALL POSTS->">
+            <hr>
+        </div>
+    </main>
+    <footer>
+        <nav id="footer">
+            <ul>
+                <a href=""><li>메일</li></a>
+                <a href="https://twitter.com/?lang=ko"><li>트위터</li></a>
+                <a href="https://www.facebook.com/"><li>페이스북</li></a>
+                <a href="https://github.com/"><li>깃허브</li></a>
+            </ul>
+        </nav>
+        <p>copyright © Bootstrap 2023</p>
+    </footer>
+</body>
+</html>

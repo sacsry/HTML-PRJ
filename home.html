@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <style>
+        .content a{
+            text-decoration: none;
+            color:black;
+            font-size: 1vw;
+        }
+        .content a:hover{
+            color:blue;
+        }
+        .content{
+            padding:50px;
+            margin:0px auto;
+        
+        }
+        .viewMore{
+            background-color: white;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+        }
+        .moreBar{
+            background-color: black;
+            margin: 10px auto;
+        }
+        .content:nth-of-type(odd){
+            background-color: gray;
+        }
+        
+    </style>
+</head>
+<body>
+    <header id="header">
+    <nav id="nav">
+        <div id="topmenu">
+            <table>
+                <td class="logo">
+                    <div id="logo" width="100px">
+                        <a href="http://127.0.0.1:5500/home.html">Blog</a>
+                        <input type="button" name="메뉴" id="메뉴" value="Menu">
+                    </div>
+                </td>
+                <td class=" sidebar">
+                    <ul id="list">
+                        <li><a href = "home.html">Home</a></li>
+                        <li><a href = "about.html">About</a></li>
+                        <li><a href = "posts.html">Posts</a></li>
+                        <li><a href = "contact.html">Contact</a></li>
+                        <li><a href = "logins.html">Logins</a></li>
+                    </ul>
+                </td>
+            </table>
+        </div>
+    </nav>
+    <div class="title">
+        <h1 id="MainTitle">My blog</h1>
+        <h2 id="SubTitle">Sub title</h2>
+    </div>
+    </header>
+    <main class="main">
+        <div class="content">
+            <a href="https://github.com/sacsry/testsample">
+                <h1>JAVA GUI 개인프로젝트</h1><br>
+                <h2>인디게임 개발</h2>
+                <span>Posted by start Bootstrap on January 31, 2020 4 mins read</span>
+            </a>
+        </div>
+        <hr>
+        <div class="content">
+            <a href="#">
+                <h1>Man Must explore, and this is exploration at its greatest</h1>
+                <h2>Problems look mighty small from 150 miles up</h2>
+                <span>Posted by start Bootstrap on January 31, 2020 4 mins read</span>
+            </a>
+        </div>
+        <hr>
+        <div class="content">
+            <a href="#">
+                <h1>Man Must explore, and this is exploration at its greatest</h1>
+                <h2>Problems look mighty small from 150 miles up</h2>
+                <span>Posted by start Bootstrap on January 31, 2020 4 mins read</span>
+            </a>
+        </div>
+        <hr>
+        <div class="content">
+            <a href="#">
+                <h1>Man Must explore, and this is exploration at its greatest</h1>
+                <h2>Problems look mighty small from 150 miles up</h2>
+                <span>Posted by start Bootstrap on January 31, 2020 4 mins read</span>
+            </a>
+        </div>
+        <hr>
+        <div class="content">
+            <a href="#">
+                <h1>Man Must explore, and this is exploration at its greatest</h1>
+                <h2>Problems look mighty small from 150 miles up</h2>
+                <span>Posted by start Bootstrap on January 31, 2020 4 mins read</span>
+            </a>
+        </div>
+        <hr>
+        <div class="moreBar">
+            <input type="submit" value="VIEW ALL POSTS->" class="viewMore">
+        </div>
+        <hr>
+    </main>
+    <footer>
+        <nav id="footer">
+                <div id="footerLink">
+                    <ul>
+                        <li><a href=""><img src="./IMG/이메일 로고.png" alt="메일"></a></li>
+                        <li><a href="https://twitter.com/?lang=ko"><img src="./IMG/트위터 로고.png" alt="트위터 로고"></a></li>
+                        <li><a href="https://www.facebook.com/"><img src="./IMG/페북 로고.png" alt=""></a></li>
+                        <li><a href="https://github.com/"><img src="./IMG/깃허브 로고.png" alt=""></a></li>
+                    </ul>
+                </div>
+                
+                <div id="footerSource">
+                    <p>copyright © Bootstrap 2023</p>
+                </div>
+        </nav>
+    </footer>
+    <script src="js/header.js">
+        
+        
+    </script>
+</body>
+</html>

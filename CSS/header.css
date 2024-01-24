@@ -1,0 +1,63 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+#topmenu{
+    display:inline-block;
+    width:100%;
+    height:50px;
+}
+#list li{
+    text-decoration: none;
+    list-style: none;
+}
+#topmenu table{
+    width: 100%;
+}
+.logo{
+    width:50%;
+}
+.sidebar{
+    float:right;
+}
+.sidebar li{
+    display:inline;
+    padding-right :10px;
+}
+.title{
+    height:250px;
+    right:clear;
+}
+.title h1,.title h2{
+    text-align: center;
+    color:white;
+}
+.title h1{
+    margin-top:80px;
+    margin-bottom:0px;
+    font-size: 6vw;
+}
+.title h2{
+    font-weight: 10;
+}
+#logo a,#list li a{
+    font-size:18px;
+    text-decoration: none;
+    font-weight: bold;
+    color:white;
+}
+#logo a{
+    font-size: 30px;
+}
+#header{
+    background-image: url("../IMG/배경\ 이미지0.jpg");
+    background-size:cover;
+    
+}
+.main{
+    margin: 0px 26%;
+}
+fieldset{
+    margin:20px auto;
+}
