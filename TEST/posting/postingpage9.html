@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        #main{
+            padding:200px;
+            text-align: left;
+            font-size: 30px;
+        }
+
+        .viewMore{
+            background-color: white;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+        }
+        .moreBar{
+            background-color: black;
+            margin: 10px auto;
+        }
+        #imgborder{
+            
+            width :1000px;
+            height: 300px;
+            margin : 0px auto;
+            position: relative;
+            
+        }
+        .morebtn{
+            position: absolute;
+            top:143px;
+            left:100px;
+            width:30px;
+            height:30px;
+            font-size: 25px;
+            background-color: gray;
+            color:white;
+            font-weight: bold;
+            z-index: 2;
+        }
+        .morebtn:hover{
+            color:black;
+        }
+        #mainborder{
+            width:1000px;
+            margin :40px auto;
+        }
+        #main div{
+            background-color: white;
+            margin:0px auto;
+            padding:0px;
+        }
+        .text{
+            font-size: 18px;
+        }
+        .submitbtn{
+            width:230px;
+            margin:0px auto;
+        }
+        input[type=submit]:hover{
+            background-color:black;
+            color:white;
+        }
+       
+        
+        
+    </style>
+</head>
+<body>
+    
+    <main>
+        <div  >
+        <div style = "text-align: center;">
+            <H1>헤더 푸터 제외 본문만 적용시킨 부분입니다.</H1>
+            <H2>기존 HTML CSS 구조에 사진을 넣고 사진슬라이드를 스크립트로 구현했습니다. </H2>
+        </div>
+        
+        
+        <div id="main">
+            <div>
+            <div id="imgborder">
+                <img src="/IMG/이현빈 copy.jpg" alt="" id="img0" class="imagelist">
+                <img src="/IMG/QR코드.png" alt="" id="img1" class="imagelist">
+                <img src="/IMG/배경 이미지1.jpg" alt="" id="img2" class="imagelist">
+                <img src="/IMG/공부 이미지.png" alt="" id="img3" class="imagelist">
+                <img src="/IMG/배경 이미지3.jpg" alt="" id="img4" class="imagelist">
+                <button class ="morebtn" > + </button>
+            </div>
+            <div id ="mainborder">
+                <div id="introduce">
+                    <h3>test1 문단</h3>
+                    <p class="text">
+
+                    </p >
+                </div>
+                
+                <div id="education">
+                    <h3>test2 문단</h3>
+                    <p class="text">
+
+                    </p >
+                </div>
+                
+                <div id="aboutme">
+                    <h3>test3 문단</h3>
+                    <p class="text">
+
+                    </p >
+                </div>
+                <div id="study">
+                   <h3>test4 문단</h3>  
+                   <p class="text">
+
+                   </p >                  
+                </div>
+                <div class="submitbtn">
+                    <input type="submit" value="Next posts->" onclick="window.location.href='./postingpage2.html'">
+                </div>
+                <hr>
+                <div class="submitbtn" style="width: 100px;">
+                    <input type="submit" class="gopost" value="목록으로 가기" onclick="window.location.href='/posts.html'">
+                </div>
+            </div >
+            </div>
+            </div>
+        </div>
+        <hr>
+        <div class="moreBar">
+            <input type="submit" value="VIEW ALL POSTS->" class="viewMore">
+        </div>
+        <hr>
+    </main>
+    
+
+    <script src="/JS/header.js"></script>
+    <script>
+        let img = document.querySelectorAll(".imagelist");
+        let imglist= [];
+        let idx = 0;
+        let Boolean = true;
+        let btn = document.querySelector(".morebtn");
+        img.forEach((img)=>{
+            imglist[idx] = img;
+            img.style.width ="130px";
+            img.style.height ="173px";
+            img.style.backgroundSize = "cover";
+            idx++;
+        });
+        
+        for(let i =1; i<img.length; i++){
+            let move = 140+(-140.5 *i);
+            imglist[i].style.transform = `translateX(${move}px)`;
+            // imglist[i].style.visibility = "hidden";
+            imglist[i].style.padding = "0px";
+            imglist[i].style.margin = "0px";
+        }
+        imglist[0].style.position = "absolute";
+        imglist[0].style.zIndex = "1";
+        btn.addEventListener('click',()=>{
+            if(Boolean == true){
+                for(let i =1; i<img.length; i++){
+                    // imglist[i].style.visibility = "visible";
+                    imglist[i].style.transform = "translateX(140px)";
+                    let delay = 0.2*i;
+                    imglist[i].style.transition = `${delay}s ease`;
+                    }
+                Boolean = false;
+            }
+            else{
+                for(let i =1; i<img.length; i++){
+                    let move = 140+(-140.5 *i);
+                    imglist[i].style.transform = `translateX(${move}px)`;
+                    let delay = 0.2*i;
+                    imglist[i].style.transition = `${delay}s linear `;
+                    }
+                Boolean = true;
+            }
+            
+        });
+        
+    </script>
+</body>
+</html>
