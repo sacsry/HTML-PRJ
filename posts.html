@@ -102,7 +102,7 @@
     </div>
     <main class="main">
         <div class="mainBorder">
-            <div class="contents about">
+            <!-- <div class="contents about">
                 <a href="./TEST/posting/postingpage1.html">
                     <h1>12-18~ 1-18 개인프로젝트</h1>
                     <h3>HTML,CSS,JAVASCRIPT 적용 ABOUT ME</h3>
@@ -312,13 +312,13 @@
                     <span>Posted by start 1-19</span>
                 </a>
             </div>
-            <hr>
-            <div class="moreBar">
-                <input type="submit" value="VIEW ALL POSTS->" class="viewMore">
-            </div>
-            <div class="writetext">
-                <input type="submit" value="글 작성하기" class="write" onclick="window.location.href='./write.html'">
-            </div>
+            <hr> -->
+        </div>
+        <div class="moreBar">
+            <input type="submit" value="VIEW ALL POSTS->" class="viewMore">
+        </div>
+        <div class="writetext">
+            <input type="submit" value="글 작성하기" class="write" onclick="window.location.href='./write.html'">
         </div>
     </main>
     <footer>
@@ -350,6 +350,33 @@
         let joinbtn = document.querySelector("#join");
         let loginsbtn = document.querySelector("#logins");
         let idx = 0;
+
+        for(let i = 1; i<=30; i++){
+            let divNode = document.createElement("div");
+            let classNode = document.createAttribute("class");
+            classNode.value = "contents about"
+            let anchorNode = document.createElement("a");
+            let hrefNode = document.createAttribute("href");
+            hrefNode.value = "./TEST/posting/postingpage"+i+".html";
+            anchorNode.setAttributeNode(hrefNode);
+            let h1Node = document.createElement("h1");
+            let h3Node = document.createElement("h3");
+            let spanNode = document.createElement("span");
+            h1Node.innerText = "1월19일 개인프로젝트 수정사항test";
+            h3Node.innerText = "1";
+            spanNode.innerText = "1";
+            
+            divNode.setAttributeNode(classNode);
+            anchorNode.appendChild(h1Node);
+            anchorNode.appendChild(h3Node);
+            anchorNode.appendChild(spanNode);
+            divNode.appendChild(anchorNode);
+
+            let mainBorder = document.querySelector(".mainBorder");
+            mainBorder.appendChild(divNode);
+        }
+        
+        
 
         homebtn.addEventListener('click' ,()=>{
                 // home.style.display ="block";
